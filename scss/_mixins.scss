@@ -1,13 +1,5 @@
 //Funciones a usar durante el proyecto
 
-@mixin tablet{
-
-    @media(min-width:$formatoTablet){
-
-        @content;
-    }
-}
-
 @mixin web{
 
     @media(min-width:$formatoWeb){
