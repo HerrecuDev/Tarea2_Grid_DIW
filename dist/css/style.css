@@ -7,3 +7,30 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+
+header .menu {
+  background-color: black;
+}
+header .menu ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  list-style: none;
+}
+header .menu ul li {
+  display: grid;
+  text-align: center;
+}
+header .menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+header img {
+  max-width: 100%;
+}
+
+main {
+  grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
+  grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+  grid-template-rows: repeat(4, auto);
+}

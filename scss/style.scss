@@ -13,3 +13,67 @@
     
 }
 
+//Padre generico de mi proyecto
+
+header{
+
+    //Diseño
+    
+    //Propiedades de Padre
+  
+   
+    
+
+    .menu{
+         background-color: black;
+       
+       
+
+        ul{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+
+            //diseño
+            list-style: none;
+
+            li {
+                display: grid;
+                text-align: center;
+
+                a{
+                    color: white;
+                    text-decoration: none;
+                    padding: 1rem;
+                }
+            }
+
+            
+            
+           
+        }
+       
+
+        
+
+    }
+
+    img{
+        max-width:100%;
+    }
+
+
+
+}
+
+main{
+
+    //Propiedades padre
+    grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+
+}
+
+
+
+
+
