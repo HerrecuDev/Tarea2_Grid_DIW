@@ -76,29 +76,18 @@ header{
 
 .articulos{
 
-    /*Diseño del titulo*/
-    h1{
-        grid-column: 1/4;
-        grid-row: 4;
-    }
+    
    
-
     display: grid;
-    grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
-    grid-template-rows: repeat(4, auto);
-    grid-gap: 10px;
-    justify-items: center;
-
+   
     @include web{
 
-        align-items: center;
+       
+        grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+        grid-template-rows: repeat(5, auto);
+        grid-gap: 10px;
+        
 
-        h1{
-            grid-column: 1/4;
-            grid-row:1;
-
-            text-align: center;
-        }
     }
 
     /*Diseño del articulo de la informacion de la receta*/
@@ -106,10 +95,8 @@ header{
 
         background-color: $fondoverde;
         color: $colorBlanco;
-        grid-column: 1/4;
-        grid-row: 1/2;
         text-align: center;
-        justify-self: normal;
+        
 
         @include web{
 
@@ -125,15 +112,23 @@ header{
 
     }
 
+
+    h1{
+        text-align: center;
+
+        @include web{
+            grid-column: 1/4;
+            grid-row:1/2;
+
+
+        }
+        
+       
+    }
+
     /*Diseño de las imagenes que ahy en el main a derecha e izquierda*/
 
     .imagenDer{
-
-        grid-column: 1/4;
-        grid-row:2/3;
-        grid-gap: 5px;
-
-
 
         @include web{
             grid-column: 3/4;
@@ -144,10 +139,8 @@ header{
 
     .imagenIzq{
 
-        grid-column: 1/4;
-        grid-row:3/4;
         justify-self: center;
-        grid-gap: 5px;
+        
 
         @include web{
             grid-column: 1/2;
@@ -161,9 +154,6 @@ header{
 
     //Incluyo todos los parrafos y el h2 en el mismo articulo con clase(textos)
     .textos{
-
-        grid-column: 1/4;
-        grid-row: 5;
 
         @include web{
 
@@ -190,22 +180,25 @@ header{
 
     footer{
         background-color: $fondoverde;
-        text-align: center;
+       
 
         .recetas{
 
            
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            padding: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            justify-content: space-around;
 
             li{
                 list-style: none;
-                padding: 5px;
+                
+                
+               
 
                     a{
                         color: gray;
                         text-decoration: none;
+                       
                     }
 
             }

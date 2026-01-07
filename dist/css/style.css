@@ -43,39 +43,22 @@ header .menu ul li a {
 
 /*Diseño del Main*/
 .articulos {
-  /*Diseño del titulo*/
   display: grid;
-  grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
-  grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
-  grid-template-rows: repeat(4, auto);
-  grid-gap: 10px;
-  justify-items: center;
   /*Diseño del articulo de la informacion de la receta*/
   /*Diseño de las imagenes que ahy en el main a derecha e izquierda*/
 }
-.articulos h1 {
-  grid-column: 1/4;
-  grid-row: 4;
-}
 @media (min-width: 768px) {
   .articulos {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .articulos h1 {
-    grid-column: 1/4;
-    grid-row: 1;
-    text-align: center;
+    grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
+    grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 10px;
   }
 }
 .articulos .info {
   background-color: #c9c84a;
   color: white;
-  grid-column: 1/4;
-  grid-row: 1/2;
   text-align: center;
-  justify-self: normal;
 }
 @media (min-width: 768px) {
   .articulos .info {
@@ -87,10 +70,14 @@ header .menu ul li a {
   padding: 20px;
   font-size: 20px;
 }
-.articulos .imagenDer {
-  grid-column: 1/4;
-  grid-row: 2/3;
-  grid-gap: 5px;
+.articulos h1 {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .articulos h1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
 }
 @media (min-width: 768px) {
   .articulos .imagenDer {
@@ -99,20 +86,13 @@ header .menu ul li a {
   }
 }
 .articulos .imagenIzq {
-  grid-column: 1/4;
-  grid-row: 3/4;
   justify-self: center;
-  grid-gap: 5px;
 }
 @media (min-width: 768px) {
   .articulos .imagenIzq {
     grid-column: 1/2;
     grid-row: 4/5;
   }
-}
-.articulos .textos {
-  grid-column: 1/4;
-  grid-row: 5;
 }
 @media (min-width: 768px) {
   .articulos .textos {
@@ -131,16 +111,15 @@ header .menu ul li a {
 /*Diseño del Footer*/
 footer {
   background-color: #c9c84a;
-  text-align: center;
 }
 footer .recetas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 footer .recetas li {
   list-style: none;
-  padding: 5px;
 }
 footer .recetas li a {
   color: gray;
@@ -150,4 +129,4 @@ footer #copyright {
   background-color: #282828;
   color: white;
   padding: 20px;
-}/*# sourceMappingURL=style.css.map */
+}
